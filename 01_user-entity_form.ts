@@ -1,11 +1,8 @@
 import { v4 as idgeneratorv4 } from "uuid";
 // idgeneratorv4(); // ⇨ '9b1deb4d-3b7d-4bad-9bdd-2b0d7b3dcb6d'
 
-// const idUser01 = idgeneratorv4();
-// console.log(idUser01);
-
-class UserIdentity {
-  id: number;
+export class UserEntity {
+  id: string;
   avatar: string;
   firstName: string;
   secondName: string;
@@ -41,7 +38,7 @@ class UserIdentity {
     isAvailable: boolean,
     isSelected: boolean
   ) {
-    this.id = idgeneratorv4();
+    this.id = this.generateUniqeID();
     this.avatar = avatar;
     this.firstName = firstName;
     this.secondName = secondName;
@@ -58,5 +55,9 @@ class UserIdentity {
     this.isHasPsychologicalExperience = isHasPsychologicalExperience;
     this.isAvailable = isAvailable;
     this.isSelected = isSelected;
+  }
+
+  generateUniqeID() {
+    return idgeneratorv4();
   }
 }
