@@ -1,5 +1,3 @@
-import { v4 as idgeneratorv4 } from "uuid";
-
 type DonationEntity = {
   date: Date;
   amount: number;
@@ -25,4 +23,4 @@ export type VolonteerEntity = {
   isSelected: Boolean;
 };
 
-type VolonteersDb = VolonteerEntity[];
+export type VolonteersDb = VolonteerEntity[];
