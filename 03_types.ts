@@ -25,4 +25,4 @@ export type VolonteerEntity = {
   isSelected: Boolean;
 };
 
-export type VolonteersDb = VolonteerEntity[];
+export type Volonteers = VolonteerEntity[];

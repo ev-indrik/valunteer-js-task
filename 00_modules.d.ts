@@ -1,3 +1,3 @@
-import { VolonteersDb } from "./03_types";
+import { Volonteers } from "./03_types";
 
-declare const usersArray: VolonteersDb;
+declare const usersArray: Volonteers;

@@ -1,7 +1,7 @@
-import { VolonteerEntity, VolonteersDb } from "./03_types";
+import { VolonteerEntity, Volonteers } from "./03_types";
 import { v4 as idgeneratorv4 } from "uuid";
 
-export const usersArray: VolonteersDb = [
+export const volonteers: Volonteers = [
   {
     id: idgeneratorv4(),
     firstName: "John",
