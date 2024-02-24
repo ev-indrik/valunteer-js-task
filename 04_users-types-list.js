@@ -1,10 +1,10 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.usersArray = void 0;
+exports.volonteers = void 0;
 var uuid_1 = require("uuid");
-exports.usersArray = [
+exports.volonteers = [
     {
-        id: (0, uuid_1.v4)(),
+        id: "diu498375395yui4uaewhuigkyawi",
         firstName: "John",
         secondName: "Rick",
         avatar: "https://www.flaticon.com/free-icon/man_4140061",
@@ -14,8 +14,8 @@ exports.usersArray = [
         sex: "male",
         phone: "+38004558887",
         donation: [
-            { date: new Date("2023-11-01"), amount: 222487 },
-            { date: new Date(), amount: 3267 },
+            { date: new Date("2023-11-01"), amount: 2000 },
+            { date: new Date(), amount: 8000 },
         ],
         isAvailable: true,
         isHasAnimalRescueExperience: true,

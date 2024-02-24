@@ -8,7 +8,7 @@
 
 // 01. Create function getUsersByGender()
 
-import { Sex, Volonteers } from "./03_types";
+import { DonationEntity, Sex, Volonteers } from "./03_types";
 import { volonteers } from "./04_users-types-list";
 
 function getUsersByGender(array: Volonteers, sex: Sex) {
@@ -41,3 +41,17 @@ const allFemaleVetExperiencedUsers =
 console.log("===>", allFemaleVetExperiencedUsers);
 
 //Create function getTotalUserDonation()
+
+function getTotalUserDonation(array: Volonteers, id: string) {
+  const selectedUser = array.find((it) => {
+    return it.id === id;
+  });
+  const donations: DonationEntity[] = selectedUser?.donation;
+  const totalDonationSum = donations.reduce((acc, it) => acc + it.amount, 0);
+  return totalDonationSum;
+}
+
+console.log(
+  "TOTAL: ",
+  getTotalUserDonation(volonteers, "diu498375395yui4uaewhuigkyawi")
+);

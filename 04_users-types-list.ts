@@ -1,9 +1,9 @@
-import { VolonteerEntity, Volonteers } from "./03_types";
+import { Volonteers } from "./03_types";
 import { v4 as idgeneratorv4 } from "uuid";
 
 export const volonteers: Volonteers = [
   {
-    id: idgeneratorv4(),
+    id: "diu498375395yui4uaewhuigkyawi",
     firstName: "John",
     secondName: "Rick",
     avatar: "https://www.flaticon.com/free-icon/man_4140061",
@@ -13,8 +13,8 @@ export const volonteers: Volonteers = [
     sex: "male",
     phone: "+38004558887",
     donation: [
-      { date: new Date("2023-11-01"), amount: 222487 },
-      { date: new Date(), amount: 3267 },
+      { date: new Date("2023-11-01"), amount: 2000 },
+      { date: new Date(), amount: 8000 },
     ],
     isAvailable: true,
     isHasAnimalRescueExperience: true,

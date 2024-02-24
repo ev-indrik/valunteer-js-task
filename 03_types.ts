@@ -1,4 +1,4 @@
-type DonationEntity = {
+export type DonationEntity = {
   date: Date;
   amount: number;
 };
