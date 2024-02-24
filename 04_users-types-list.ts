@@ -1,7 +1,7 @@
 import { VolonteerEntity, VolonteersDb } from "./03_types";
 import { v4 as idgeneratorv4 } from "uuid";
 
-const usersArray: VolonteersDb = [
+export const usersArray: VolonteersDb = [
   {
     id: idgeneratorv4(),
     firstName: "John",
@@ -10,7 +10,7 @@ const usersArray: VolonteersDb = [
     age: 38,
     address: "Street, Town",
     country: "Sweden",
-    sex: "man",
+    sex: "male",
     phone: "+38004558887",
     donation: [
       { date: new Date("2023-11-01"), amount: 222487 },
@@ -32,7 +32,7 @@ const usersArray: VolonteersDb = [
     age: 27,
     address: "Street, Town",
     country: "UK",
-    sex: "man",
+    sex: "male",
     phone: "+38004974887",
     donation: [
       { date: new Date("2023-02-09"), amount: 25487 },
@@ -50,11 +50,11 @@ const usersArray: VolonteersDb = [
     id: idgeneratorv4(),
     firstName: "Lean",
     secondName: "Rihn",
-    avatar: "https://www.flaticon.com/free-icon/woman_14671574",
+    avatar: "https://www.flaticon.com/free-icon/womale_14671574",
     age: 54,
     address: "Street, Town",
     country: "Poland",
-    sex: "woman",
+    sex: "female",
     phone: "+38031454",
     donation: [
       { date: new Date("2023-08-09"), amount: 25487 },
@@ -74,10 +74,10 @@ const usersArray: VolonteersDb = [
     firstName: "Ruth",
     secondName: "Great",
     avatar: "https://www.flaticon.com/free-icon/doctor_14244662",
-    age: 39,
+    age: 38,
     address: "Street, Town",
     country: "England",
-    sex: "woman",
+    sex: "female",
     phone: "+3803581454",
     donation: [{ date: new Date(), amount: 950000 }],
     isAvailable: true,
@@ -96,7 +96,7 @@ const usersArray: VolonteersDb = [
     age: 39,
     address: "Street, Town",
     country: "Sweden",
-    sex: "woman",
+    sex: "female",
     phone: "+38035468854",
     donation: [
       { date: new Date("2022-06-11"), amount: 7487 },
@@ -120,7 +120,7 @@ const usersArray: VolonteersDb = [
     age: 68,
     address: "Street, Town",
     country: "England",
-    sex: "man",
+    sex: "male",
     phone: "+380222468854",
     donation: [],
     isAvailable: true,
@@ -139,7 +139,7 @@ const usersArray: VolonteersDb = [
     age: 44,
     address: "Street, Town",
     country: "Poland",
-    sex: "woman",
+    sex: "female",
     phone: "+385654558887",
     donation: [{ date: new Date(), amount: 3267 }],
     isAvailable: false,
@@ -158,7 +158,7 @@ const usersArray: VolonteersDb = [
     age: 41,
     address: "Street, Town",
     country: "Ukraine",
-    sex: "man",
+    sex: "male",
     phone: "+3807812350",
     donation: [
       { date: new Date("2023-11-01"), amount: 500 },
@@ -180,7 +180,7 @@ const usersArray: VolonteersDb = [
     age: 40,
     address: "Street, Town",
     country: "Ukraine",
-    sex: "woman",
+    sex: "female",
     phone: "+380045748887",
     donation: [
       { date: new Date("2022-02-22"), amount: 10000 },
@@ -203,7 +203,7 @@ const usersArray: VolonteersDb = [
     age: 47,
     address: "Street, Town",
     country: "Poland",
-    sex: "man",
+    sex: "male",
     phone: "+38099887",
     donation: [{ date: new Date(), amount: 3267 }],
     isAvailable: true,
@@ -222,7 +222,7 @@ const usersArray: VolonteersDb = [
     age: 28,
     address: "Street, Town",
     country: "Ukraine",
-    sex: "man",
+    sex: "male",
     phone: "+38004500887",
     donation: [
       { date: new Date("2022-03-01"), amount: 55000 },
@@ -246,7 +246,7 @@ const usersArray: VolonteersDb = [
     age: 29,
     address: "Street, Town",
     country: "Poland",
-    sex: "man",
+    sex: "male",
     phone: "+380124558887",
     donation: [
       { date: new Date("2023-03-01"), amount: 20000 },
@@ -268,7 +268,7 @@ const usersArray: VolonteersDb = [
     age: 37,
     address: "Street, Town",
     country: "Ukraine",
-    sex: "woman",
+    sex: "female",
     phone: "+38004558222",
     donation: [
       { date: new Date("2023-08-01"), amount: 200 },
@@ -291,7 +291,7 @@ const usersArray: VolonteersDb = [
     age: 43,
     address: "Street, Town",
     country: "UK",
-    sex: "man",
+    sex: "male",
     phone: "+3800687152",
     donation: [{ date: new Date("2023-11-01"), amount: 6000 }],
     isAvailable: true,
@@ -310,7 +310,7 @@ const usersArray: VolonteersDb = [
     age: 32,
     address: "Street, Town",
     country: "Sweden",
-    sex: "man",
+    sex: "male",
     phone: "+38004567487",
     donation: [
       { date: new Date("2022-03-01"), amount: 1000000 },
@@ -337,7 +337,7 @@ const usersArray: VolonteersDb = [
     age: 23,
     address: "Street, Town",
     country: "UK",
-    sex: "woman",
+    sex: "female",
     phone: "+380244558887",
     donation: [
       { date: new Date("2023-11-26"), amount: 56934 },
@@ -359,7 +359,7 @@ const usersArray: VolonteersDb = [
     age: 36,
     address: "Street, Town",
     country: "Ukraine",
-    sex: "woman",
+    sex: "female",
     phone: "+38004554448",
     donation: [
       { date: new Date("2022-10-24"), amount: 10000 },
@@ -381,7 +381,7 @@ const usersArray: VolonteersDb = [
     age: 18,
     address: "Street, Town",
     country: "England",
-    sex: "woman",
+    sex: "female",
     phone: "+38872558887",
     donation: [
       { date: new Date("2022-02-22"), amount: 2000 },
@@ -408,7 +408,7 @@ const usersArray: VolonteersDb = [
     age: 28,
     address: "Street, Town",
     country: "Ukraine",
-    sex: "woman",
+    sex: "female",
     phone: "+38003574",
     donation: [
       { date: new Date("2023-12-01"), amount: 8750 },
@@ -430,7 +430,7 @@ const usersArray: VolonteersDb = [
     age: 31,
     address: "Street, Town",
     country: "Poland",
-    sex: "man",
+    sex: "male",
     phone: "+38004500887",
     donation: [{ date: new Date(), amount: 250000 }],
     isAvailable: true,
@@ -449,7 +449,7 @@ const usersArray: VolonteersDb = [
     age: 24,
     address: "Street, Town",
     country: "England",
-    sex: "man",
+    sex: "male",
     phone: "+3800428887",
     donation: [
       { date: new Date("2022-11-04"), amount: 820000 },

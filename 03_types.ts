@@ -3,6 +3,8 @@ type DonationEntity = {
   amount: number;
 };
 
+export type Sex = "male" | "female";
+
 export type VolonteerEntity = {
   id: string;
   avatar: string;
@@ -11,7 +13,7 @@ export type VolonteerEntity = {
   phone: string;
   address: string;
   country: string;
-  sex: string;
+  sex: Sex;
   age: number;
   donation: DonationEntity[];
   isHasDriverLicence: Boolean;
