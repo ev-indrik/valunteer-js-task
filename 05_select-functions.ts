@@ -42,14 +42,32 @@ console.log("===>", allFemaleVetExperiencedUsers);
 
 //Create function getTotalUserDonation()
 
-function getTotalUserDonation(array: Volonteers, id: string) {
-  const selectedUser = array.find((it) => {
-    return it.id === id;
-  });
-  const donations: DonationEntity[] = selectedUser?.donation;
-  const totalDonationSum = donations.reduce((acc, it) => acc + it.amount, 0);
-  return totalDonationSum;
+// function getTotalUserDonation(array: Volonteers, id: string) {
+//   const selectedUser = array.find((it) => {
+//     return it.id === id;
+//   });
+//   const donations: DonationEntity[] = selectedUser?.donation;
+//   const totalDonationSum = donations.reduce((acc, it) => acc + it.amount, 0);
+//   return totalDonationSum;
+// }
+
+export function getTotalUserDonation(array: Volonteers, id: string): number {
+  for (const user of array) {
+    if (user.id === id) {
+      const totalDonationSum = user.donation.reduce(
+        (acc, donation) => acc + donation.amount,
+        0
+      );
+      return totalDonationSum;
+    }
+  }
+  return 0; // Return 0 if user with specified id is not found
 }
+
+console.log(
+  "TOTAL: ",
+  getTotalUserDonation(volonteers, "diu498375395yui4uaewhuigkyawi")
+);
 
 console.log(
   "TOTAL: ",
