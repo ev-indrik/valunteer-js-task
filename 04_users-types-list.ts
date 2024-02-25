@@ -3,7 +3,7 @@ import { v4 as idgeneratorv4 } from "uuid";
 
 export const volonteers: Volonteers = [
   {
-    id: "diu498375395yui4uaewhuigkyawi",
+    id: "vln01",
     firstName: "John",
     secondName: "Rick",
     avatar: "https://www.flaticon.com/free-icon/man_4140061",
@@ -22,10 +22,10 @@ export const volonteers: Volonteers = [
     isHasMedicalExperience: true,
     isHasPsychologicalExperience: false,
     isHasVetExperience: true,
-    isSelected: true,
+    isSelected: false,
   },
   {
-    id: idgeneratorv4(),
+    id: "vln02",
     firstName: "Sam",
     secondName: "Got",
     avatar: "https://www.flaticon.com/free-icon/doctor_14244649",
@@ -47,7 +47,7 @@ export const volonteers: Volonteers = [
     isSelected: false,
   },
   {
-    id: idgeneratorv4(),
+    id: "vln03",
     firstName: "Lean",
     secondName: "Rihn",
     avatar: "https://www.flaticon.com/free-icon/womale_14671574",
@@ -70,11 +70,11 @@ export const volonteers: Volonteers = [
     isSelected: false,
   },
   {
-    id: idgeneratorv4(),
+    id: "vln04",
     firstName: "Ruth",
     secondName: "Great",
     avatar: "https://www.flaticon.com/free-icon/doctor_14244662",
-    age: 38,
+    age: 12,
     address: "Street, Town",
     country: "England",
     sex: "female",
@@ -89,7 +89,7 @@ export const volonteers: Volonteers = [
     isSelected: false,
   },
   {
-    id: idgeneratorv4(),
+    id: "vln05",
     firstName: "May",
     secondName: "Lee",
     avatar: "https://www.flaticon.com/free-icon/teacher_12404120",
@@ -113,7 +113,7 @@ export const volonteers: Volonteers = [
     isSelected: false,
   },
   {
-    id: idgeneratorv4(),
+    id: "vln06",
     firstName: "Gareth",
     secondName: "White",
     avatar: "https://www.flaticon.com/free-icon/teacher_12404093",
@@ -132,7 +132,7 @@ export const volonteers: Volonteers = [
     isSelected: false,
   },
   {
-    id: idgeneratorv4(),
+    id: "vln07",
     firstName: "Katara",
     secondName: "Rose",
     avatar: "https://www.flaticon.com/free-icon/customer-service_12456948",
@@ -151,7 +151,7 @@ export const volonteers: Volonteers = [
     isSelected: false,
   },
   {
-    id: idgeneratorv4(),
+    id: "vln08",
     firstName: "Arthur",
     secondName: "Madison",
     avatar: "https://www.flaticon.com/free-icon/caregiver_12631745",
@@ -173,7 +173,7 @@ export const volonteers: Volonteers = [
     isSelected: false,
   },
   {
-    id: idgeneratorv4(),
+    id: "vln09",
     firstName: "Dori",
     secondName: "Aang",
     avatar: "https:https://www.flaticon.com/free-icon/teacher_12404113",
@@ -196,7 +196,7 @@ export const volonteers: Volonteers = [
     isSelected: false,
   },
   {
-    id: idgeneratorv4(),
+    id: "vln10",
     firstName: "Robert",
     secondName: "Kovalsky",
     avatar: "https://www.flaticon.com/free-icon/deceased_12402138",
@@ -215,7 +215,7 @@ export const volonteers: Volonteers = [
     isSelected: false,
   },
   {
-    id: idgeneratorv4(),
+    id: "vln11",
     firstName: "Max",
     secondName: "Gordeev",
     avatar: "https://www.flaticon.com/free-icon/man_2202112",
@@ -239,7 +239,7 @@ export const volonteers: Volonteers = [
     isSelected: false,
   },
   {
-    id: idgeneratorv4(),
+    id: "vln12",
     firstName: "Roger",
     secondName: "Smilton",
     avatar: "https://www.flaticon.com/free-icon/gamer_4333609",
@@ -261,7 +261,7 @@ export const volonteers: Volonteers = [
     isSelected: false,
   },
   {
-    id: idgeneratorv4(),
+    id: "vln13",
     firstName: "Angy",
     secondName: "Sokolova",
     avatar: "https://www.flaticon.com/free-icon/woman_4140047",
@@ -284,7 +284,7 @@ export const volonteers: Volonteers = [
     isSelected: false,
   },
   {
-    id: idgeneratorv4(),
+    id: "vln14",
     firstName: "Tony",
     secondName: "Ratt",
     avatar: "https://www.flaticon.com/free-icon/man_4140048",
@@ -303,7 +303,7 @@ export const volonteers: Volonteers = [
     isSelected: false,
   },
   {
-    id: idgeneratorv4(),
+    id: "vln15",
     firstName: "Cody",
     secondName: "Royal",
     avatar: "https://www.flaticon.com/free-icon/boy_1999625",
@@ -330,7 +330,7 @@ export const volonteers: Volonteers = [
     isSelected: false,
   },
   {
-    id: idgeneratorv4(),
+    id: "vln16",
     firstName: "Sally",
     secondName: "Moon",
     avatar: "https://www.flaticon.com/free-icon/human_11498793",
@@ -352,7 +352,7 @@ export const volonteers: Volonteers = [
     isSelected: false,
   },
   {
-    id: idgeneratorv4(),
+    id: "vln17",
     firstName: "Leile",
     secondName: "Sonta",
     avatar: "https://www.flaticon.com/free-icon/woman_4140051",
@@ -374,7 +374,7 @@ export const volonteers: Volonteers = [
     isSelected: false,
   },
   {
-    id: idgeneratorv4(),
+    id: "vln18",
     firstName: "Onya",
     secondName: "Phillips",
     avatar: "https://www.flaticon.com/free-icon/woman_706831",
@@ -401,7 +401,7 @@ export const volonteers: Volonteers = [
     isSelected: false,
   },
   {
-    id: idgeneratorv4(),
+    id: "vln19",
     firstName: "Toph",
     secondName: "Orlova",
     avatar: "https://www.flaticon.com/free-icon/woman_4140040",
@@ -423,7 +423,7 @@ export const volonteers: Volonteers = [
     isSelected: false,
   },
   {
-    id: idgeneratorv4(),
+    id: "vln20",
     firstName: "Chris",
     secondName: "Ankrovski",
     avatar: "https://www.flaticon.com/free-icon/man_4140061",
@@ -442,7 +442,7 @@ export const volonteers: Volonteers = [
     isSelected: false,
   },
   {
-    id: idgeneratorv4(),
+    id: "vln21",
     firstName: "William",
     secondName: "Todd",
     avatar: "https://www.flaticon.com/free-icon/man_4140048",

@@ -1,7 +1,6 @@
 "use strict";
 // Functions of different selections from the volonteers array
 /*
-5. Create function selectUser()
 6. Create function getTheYoungestUser()
 7. Create function getTheOldestUser()
 8. Create function getTotalDonationsAmount()
@@ -18,7 +17,7 @@ function getUsersByGender(array, sex) {
     //   console.log(`one name`, array[1].secondName);
 }
 var maleArray = getUsersByGender(_04_users_types_list_1.volonteers, "male");
-console.log("Volunteers men: ", maleArray);
+// console.log("Volunteers men: ", maleArray);
 // Create function getAllFemaleVetExperiencedUsers()
 function getAllFemaleVetExperiencedUsers(array) {
     return array.filter(function (it) {
@@ -30,7 +29,7 @@ function getAllFemaleVetExperiencedUsers(array) {
     //   });
 }
 var allFemaleVetExperiencedUsers = getAllFemaleVetExperiencedUsers(_04_users_types_list_1.volonteers);
-console.log("===>", allFemaleVetExperiencedUsers);
+// console.log("===>", allFemaleVetExperiencedUsers);
 //Create function getTotalUserDonation()
 // function getTotalUserDonation(array: Volonteers, id: string) {
 //   const selectedUser = array.find((it) => {
@@ -48,8 +47,33 @@ function getTotalUserDonation(array, id) {
             return totalDonationSum;
         }
     }
-    return 0; // Return 0 if user with specified id is not found
+    return null; // Return 0 if user with specified id is not found
 }
 exports.getTotalUserDonation = getTotalUserDonation;
-console.log("TOTAL: ", getTotalUserDonation(_04_users_types_list_1.volonteers, "diu498375395yui4uaewhuigkyawi"));
-console.log("TOTAL: ", getTotalUserDonation(_04_users_types_list_1.volonteers, "diu498375395yui4uaewhuigkyawi"));
+// console.log("TOTAL: ", getTotalUserDonation(volonteers, "vln01"));
+// Create function selectUser()
+function selectUser(arr, id) {
+    var mapArr = arr.map(function (it) {
+        if (it.id === id) {
+            it.isSelected = true;
+            return it;
+        }
+        return it;
+    });
+    return mapArr;
+}
+var modifiedArr = selectUser(_04_users_types_list_1.volonteers, "vln03");
+// console.log("NEW ARR: ", modifiedArr);
+// Create function getTheYoungestUser()
+function getTheYoungestUser(arr) {
+    return arr.reduce(function (youngestUser, currentUser) {
+        // if (currentUser.age < youngestUser.age) {
+        //   return currentUser;
+        // } else {
+        //   return youngestUser;
+        // }
+        return currentUser.age > youngestUser.age ? currentUser : youngestUser;
+    }, arr[0]);
+}
+var theYoungestVol = getTheYoungestUser(_04_users_types_list_1.volonteers);
+console.log("Little one: ", theYoungestVol);

@@ -1,14 +1,11 @@
 // Functions of different selections from the volonteers array
 /*
-5. Create function selectUser()
-6. Create function getTheYoungestUser()
-7. Create function getTheOldestUser()
-8. Create function getTotalDonationsAmount()
+
 9. Create function orderUsersByAge()*/
 
 // 01. Create function getUsersByGender()
 
-import { DonationEntity, Sex, Volonteers } from "./03_types";
+import { Sex, Volonteers } from "./03_types";
 import { volonteers } from "./04_users-types-list";
 
 function getUsersByGender(array: Volonteers, sex: Sex) {
@@ -22,7 +19,7 @@ function getUsersByGender(array: Volonteers, sex: Sex) {
 }
 const maleArray = getUsersByGender(volonteers, "male");
 
-console.log("Volunteers men: ", maleArray);
+// console.log("Volunteers men: ", maleArray);
 
 // Create function getAllFemaleVetExperiencedUsers()
 
@@ -38,7 +35,7 @@ function getAllFemaleVetExperiencedUsers(array: Volonteers) {
 
 const allFemaleVetExperiencedUsers =
   getAllFemaleVetExperiencedUsers(volonteers);
-console.log("===>", allFemaleVetExperiencedUsers);
+// console.log("===>", allFemaleVetExperiencedUsers);
 
 //Create function getTotalUserDonation()
 
@@ -61,15 +58,41 @@ export function getTotalUserDonation(array: Volonteers, id: string): number {
       return totalDonationSum;
     }
   }
-  return 0; // Return 0 if user with specified id is not found
+  return null; // Return 0 if user with specified id is not found
 }
 
-console.log(
-  "TOTAL: ",
-  getTotalUserDonation(volonteers, "diu498375395yui4uaewhuigkyawi")
-);
+// console.log("TOTAL: ", getTotalUserDonation(volonteers, "vln01"));
 
-console.log(
-  "TOTAL: ",
-  getTotalUserDonation(volonteers, "diu498375395yui4uaewhuigkyawi")
-);
+// Create function selectUser()
+
+function selectUser(arr: Volonteers, id: string): Volonteers {
+  const mapArr = arr.map((it) => {
+    if (it.id === id) {
+      it.isSelected = true;
+      return it;
+    }
+    return it;
+  });
+  return mapArr;
+}
+
+const modifiedArr = selectUser(volonteers, "vln03");
+// console.log("NEW ARR: ", modifiedArr);
+
+// Create function getTheYoungestUser()
+
+function getTheYoungestUser(arr: Volonteers) {
+  return arr.reduce((youngestUser, currentUser) => {
+    // if (currentUser.age < youngestUser.age) {
+    //   return currentUser;
+    // } else {
+    //   return youngestUser;
+    // }
+    return currentUser.age < youngestUser.age ? currentUser : youngestUser;
+  }, arr[0]);
+}
+
+const theYoungestVol = getTheYoungestUser(volonteers);
+// console.log("Little one: ", theYoungestVol);
+
+// Create function getTotalDonationsAmount()
