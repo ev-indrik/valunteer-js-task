@@ -96,3 +96,43 @@ const theYoungestVol = getTheYoungestUser(volonteers);
 // console.log("Little one: ", theYoungestVol);
 
 // Create function getTotalDonationsAmount()
+
+// function getTotalDonationsAmount(arr: Volonteers): number {
+//   const totalAmount: number = arr.reduce((sum, vol) => {
+//     return sum + vol.donation.reduce((acc, curr) => acc + curr.amount, 0);
+//   }, 0);
+
+//   return totalAmount;
+// }
+
+function getTotalDonationsAmountWithNames(
+  arr: Volonteers
+): { name: string; total: number }[] {
+  const allUsersTotalDonations = arr.map((it) => {
+    const currentUserdonations = it.donation.reduce((acc, dit) => {
+      return acc + dit.amount;
+    }, 0);
+    return { name: it.firstName, total: currentUserdonations };
+  });
+
+  return allUsersTotalDonations;
+}
+
+const TotalDonationsAmount = getTotalDonationsAmountWithNames(volonteers);
+// console.log(TotalDonationsAmount);
+
+//
+
+function getTotalDonationsAmount(arr: Volonteers): number {
+  const allVolDonations: number[] = arr.map((it) => {
+    return it.donation.reduce((acc, dit) => {
+      return acc + dit.amount;
+    }, 0);
+  });
+
+  return allVolDonations.reduce((totalSum, userSum) => {
+    return totalSum + userSum;
+  }, 0);
+}
+
+// console.log(getTotalDonationsAmount(volonteers));

@@ -1,9 +1,7 @@
 "use strict";
 // Functions of different selections from the volonteers array
 /*
-6. Create function getTheYoungestUser()
-7. Create function getTheOldestUser()
-8. Create function getTotalDonationsAmount()
+
 9. Create function orderUsersByAge()*/
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getTotalUserDonation = void 0;
@@ -72,8 +70,38 @@ function getTheYoungestUser(arr) {
         // } else {
         //   return youngestUser;
         // }
-        return currentUser.age > youngestUser.age ? currentUser : youngestUser;
+        return currentUser.age < youngestUser.age ? currentUser : youngestUser;
     }, arr[0]);
 }
 var theYoungestVol = getTheYoungestUser(_04_users_types_list_1.volonteers);
-console.log("Little one: ", theYoungestVol);
+// console.log("Little one: ", theYoungestVol);
+// Create function getTotalDonationsAmount()
+// function getTotalDonationsAmount(arr: Volonteers): number {
+//   const totalAmount: number = arr.reduce((sum, vol) => {
+//     return sum + vol.donation.reduce((acc, curr) => acc + curr.amount, 0);
+//   }, 0);
+//   return totalAmount;
+// }
+function getTotalDonationsAmountWithNames(arr) {
+    var allUsersTotalDonations = arr.map(function (it) {
+        var currentUserdonations = it.donation.reduce(function (acc, dit) {
+            return acc + dit.amount;
+        }, 0);
+        return { name: it.firstName, total: currentUserdonations };
+    });
+    return allUsersTotalDonations;
+}
+var TotalDonationsAmount = getTotalDonationsAmountWithNames(_04_users_types_list_1.volonteers);
+// console.log(TotalDonationsAmount);
+//
+function getTotalDonationsAmount(arr) {
+    var allVolDonations = arr.map(function (it) {
+        return it.donation.reduce(function (acc, dit) {
+            return acc + dit.amount;
+        }, 0);
+    });
+    return allVolDonations.reduce(function (totalSum, userSum) {
+        return totalSum + userSum;
+    }, 0);
+}
+console.log(getTotalDonationsAmount(_04_users_types_list_1.volonteers));

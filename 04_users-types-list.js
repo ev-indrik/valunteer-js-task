@@ -74,7 +74,7 @@ exports.volonteers = [
         firstName: "Ruth",
         secondName: "Great",
         avatar: "https://www.flaticon.com/free-icon/doctor_14244662",
-        age: 98,
+        age: 12,
         address: "Street, Town",
         country: "England",
         sex: "female",
