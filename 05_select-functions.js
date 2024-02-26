@@ -1,8 +1,5 @@
 "use strict";
 // Functions of different selections from the volonteers array
-/*
-
-9. Create function orderUsersByAge()*/
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.getTotalUserDonation = void 0;
 var _04_users_types_list_1 = require("./04_users-types-list");
@@ -104,4 +101,15 @@ function getTotalDonationsAmount(arr) {
         return totalSum + userSum;
     }, 0);
 }
-console.log(getTotalDonationsAmount(_04_users_types_list_1.volonteers));
+// console.log(getTotalDonationsAmount(volonteers));
+// Create function orderUsersByAge()
+function orderUsersByAge(arr) {
+    return arr.slice().sort(function (a, b) { return a.age - b.age; });
+}
+var usersOrderedByAge = orderUsersByAge(_04_users_types_list_1.volonteers);
+// console.log("Age sorting", usersOrderedByAge);
+function orderUsersByAgeViseVerse(arr) {
+    return arr.slice().sort(function (a, b) { return b.age - a.age; });
+}
+var usersByAgeViseVerse = orderUsersByAgeViseVerse(_04_users_types_list_1.volonteers);
+console.log(usersByAgeViseVerse);

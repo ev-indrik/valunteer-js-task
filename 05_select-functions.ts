@@ -1,7 +1,4 @@
 // Functions of different selections from the volonteers array
-/*
-
-9. Create function orderUsersByAge()*/
 
 // 01. Create function getUsersByGender()
 
@@ -136,3 +133,19 @@ function getTotalDonationsAmount(arr: Volonteers): number {
 }
 
 // console.log(getTotalDonationsAmount(volonteers));
+
+// Create function orderUsersByAge()
+
+function orderUsersByAge(arr: Volonteers): Volonteers {
+  return arr.slice().sort((a, b) => a.age - b.age);
+}
+
+const usersOrderedByAge = orderUsersByAge(volonteers);
+// console.log("Age sorting", usersOrderedByAge);
+
+function orderUsersByAgeViseVerse(arr: Volonteers): Volonteers {
+  return arr.slice().sort((a, b) => b.age - a.age);
+}
+
+const usersByAgeViseVerse = orderUsersByAgeViseVerse(volonteers);
+console.log(usersByAgeViseVerse);
